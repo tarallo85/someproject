@@ -1,0 +1,41 @@
+import json
+import os
+import requests
+
+this_list = ['domain', 'email', 'user', 'some_password']
+that_list = ['tecnimont.it', 'user@tecnimont.it', 'user', 'Tecnimont123!']
+
+the_other_list = list(zip(this_list, that_list))
+print(type(the_other_list))
+
+# let's create a list of dictionary starting from two lists
+second_list ['tecnimont.com', 'user_tec@tecnimont.com', 'user_tec', 'T3cn1mont345!!"]
+output_list = []
+for index, item in enumerate(second_list):
+  output_list.append({'key': that_list[index], 'value': json.dumps(item)})
+  
+# let's print the output list
+print('list of dict {} \n'.format(output_list))
+
+# let's try to make an HTTP request to an URL
+
+headers = {
+  "accept": "application/json",
+  "authorization": "bearer token TOKEN"
+  
+response = requests.request('GET', 'https://www.mairetecnimont.com/', headers=headers)
+
+# let's verify if the host is reachable
+status = response.status_code
+print(status)
+
+if status == "200":
+  print('url reachable')
+else:
+  print('url not reachable')
+
+print(response.reason)
+
+
+
+''' False Flags for Cyber threat Intelligence POV '''
